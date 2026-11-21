@@ -1,0 +1,21 @@
+name = "coolage"
+main = "src/index.js"
+compatibility_date = "2026-11-15"
+
+[assets]
+directory = "./public"
+binding = "ASSETS"
+run_worker_first = ["/api/*"]
+
+[[d1_databases]]
+binding = "DB"
+database_name = "coolage-db"
+database_id = "5d22dd88-b8ee-4236-a755-fd3ee977ca62"
+migrations_dir = "migrations"
+
+# To host the frontend on InfinityFree instead of this Worker, put its EXACT
+# HTTPS origin below (scheme + hostname, no path/trailing slash) and redeploy.
+# Example: FRONTEND_ORIGIN = "https://coolage.infinityfreeapp.com"
+# Leave empty if deploying frontend + API together on Cloudflare.
+[vars]
+FRONTEND_ORIGIN = ""

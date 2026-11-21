@@ -1,0 +1,17 @@
+{
+  "name": "coolage-starter",
+  "private": true,
+  "version": "0.7.6",
+  "type": "module",
+  "scripts": {
+    "dev": "wrangler dev",
+    "migrate:local": "wrangler d1 migrations apply coolage-db --local",
+    "migrate:remote": "wrangler d1 migrations apply coolage-db --remote",
+    "deploy": "wrangler deploy",
+    "seed:school": "node scripts/create-school.mjs",
+    "test": "node --test tests/*.test.mjs"
+  },
+  "devDependencies": {
+    "wrangler": "^4.0.0"
+  }
+}
